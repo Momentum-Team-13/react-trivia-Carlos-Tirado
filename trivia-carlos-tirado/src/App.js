@@ -1,26 +1,31 @@
-import './App.css';
+import './App.css'
 import React, { useEffect, useState } from 'react'
+import CategoryList from './components/CategoryList'
 import axios from 'axios'
 
 
 function App() {
-  const [categories, setCategories] = useState([])
+    const [categories, setCategories] = useState([])
 
-  useEffect(() => {
-    axios
-    .get('https://opentdb.com/api_category.php')
-    .then((res) => setCategories(res.data.trivia_categories))
-}, []) 
+    useEffect(() => {
+        axios
+            .get('https://opentdb.com/api_category.php')
+            .then((res) => setCategories(res.data.trivia_categories))
+    }, [])
 
-  return (
-    <div className='triviagame'>
-      <h1>All categories</h1>
-    </div>
-  
+    return (
+        <div className='header'>
+            <CategoryList categories={categories} />
+        </div>
     );
-  }
-  
-  export default App;
+}
+
+export default App
+
+
+
+
+    
 
 
 
@@ -67,4 +72,7 @@ function App() {
 
 
 
-  //<div><CategoryList categories={categories}></CategoryList></div>
+
+
+
+
