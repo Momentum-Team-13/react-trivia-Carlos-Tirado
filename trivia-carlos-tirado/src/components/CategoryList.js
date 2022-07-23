@@ -7,10 +7,8 @@ import Questions from './Questions'
 function CategoryList({ categories }) {
     const [selectedCategory, setSelectedCategory] = useState(null)
     const [categoryURL, setCategoryURL] = useState()
-    const onClick = () => {
-        console.log('categories')
-    }
-    const handleSelectedCategory = (selected) => {
+    
+    const onSelectedCategory = (selected) => {
         console.log(`selected category: ${selected.name}, id: ${selected.id}`)
         setSelectedCategory(selected)
         makeURL(selected)
@@ -25,7 +23,7 @@ function CategoryList({ categories }) {
             {selectedCategory ? (<Questions categoryID={categoryURL} /> ) : (categories.map((category) =>
             <div className='container'>
     
-            <button  onClick={() => handleSelectedCategory(category)}>{category.name}</button></div>
+            <button  onClick={() => onSelectedCategory(category)}>{category.name}</button></div>
                     
                 )
             )}

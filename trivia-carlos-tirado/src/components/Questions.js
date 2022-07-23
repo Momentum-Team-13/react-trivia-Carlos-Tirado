@@ -64,7 +64,7 @@ function Questions(categoryURL) {
     return (
         
         <>
-            <div className='questions-list'>
+            <div className='questionsList'>
                 {triviaQuestions.length > 0 &&
                     <>
                         <h1>Question {currentQuestionIndex + 1}:<br />
