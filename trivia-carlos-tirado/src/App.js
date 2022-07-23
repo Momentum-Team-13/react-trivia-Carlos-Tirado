@@ -23,6 +23,7 @@ function App() {
 export default App
 
 
+// <div> {categories.map((category, idx) => (<CategoriesComponent category={category} key={idx}/>))}
 
 
     
