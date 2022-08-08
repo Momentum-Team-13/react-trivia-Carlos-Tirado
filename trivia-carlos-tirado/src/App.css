@@ -1,0 +1,41 @@
+.header, h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+flex-direction: row;
+padding-left: 5%;
+}
+
+button {
+  padding: 10px;
+  border: 1px solid rgb(213, 215, 216); 
+  margin: 4px;
+  background-color:rgb(57, 117, 195);
+  color: antiquewhite;
+}
+
+.answerButtons {
+    background-color: rgb(62, 222, 222);
+    width: 80%;
+    color: rgb(5, 5, 98);
+}
+
+
+.score {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  font-size: 35px;
+  padding: 50px px;
+  border-radius: 50%;
+  color: rgb(250, 247, 247);
+  border: 1px solid rgb(158, 155, 155); 
+  background-color: rgb(119, 99, 218);
+}
+
+.questionsList {
+  color: rgb(151, 38, 38);
+  font-family:'Courier New', Courier, monospace;
+}
